@@ -1,20 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
 
 import "./index.css";
-import logo from "./logo.svg";
 
-const List  = () => (
-  
-    <ul>
-      <li>get a job</li>
-      <li>get a job</li>
-      <li>get a job</li>
-    </ul>
-  
-)
+const Page = () => (
+	<>
+		<Header />
+    
+		<Footer />
+	</>
+);
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<List/>
+		<Page />
 	</React.StrictMode>
 );
