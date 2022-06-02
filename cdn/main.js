@@ -1,28 +1,15 @@
-function Navbar() {
-	return (
-		<nav>
-         <h1>Logo</h1>
-			<ul>
-				<li>item 1</li>
-				<li>item 2</li>
-			</ul>
-		</nav>
-	);
-}
+const navbar = (
+	<nav>
+		<h1>website</h1>
+		<ul>
+			<li>Pricing</li>
+			<li>About</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+)
 
-function Content() {
-	return (
-		<p>
-         tedxt
-      </p>
-	);
-}
+console.log(navbar)
 
 
-ReactDOM.render(
-	<div>
-      <Navbar />
-      <Content />
-   </div>,
-	document.getElementById("root")
-);
+ReactDOM.render(navbar, document.getElementById("root"));
