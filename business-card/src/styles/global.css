@@ -5,9 +5,25 @@
    box-sizing: border-box;
 }
 
+body{
+   font-family: var(--ff-inter);
+}
+
 :root{
+   --white: #fff;
+
+   --light-background: #F5F5F5;
+   --orange: #f47d27;
+   
+   --clr-title: #2b283a;
+   --clr-text: #4a4e74; 
+
+   --grey-300:#D1D5DB ; 
+   --grey-700: #374151;
 
 
    /* Fonts */
    font-size: 62.5%; /* transformar o font em 10px */
+
+   --ff-inter: 'Inter', sans-serif;
 }

@@ -1,0 +1,50 @@
+.cardContainer {
+	max-width: min(55rem, 100%);
+	background-color: var(--light-background);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.info .name {
+	margin-top: 2rem;
+	font-family: var(--ff-inter);
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 3rem;
+
+	color: var(--clr-title);
+}
+
+.info .job {
+	margin-top: 0.6rem;
+   
+	font-family: var(--ff-inter);
+	font-weight: 400;
+	font-size: 1.28rem;
+	line-height: 1.5rem;
+
+	color: var(--orange);
+}
+
+.info small {
+	margin-top: 0.9rem;
+	font-family: var(--ff-inter);
+
+	font-weight: 400;
+	font-size: 1.02rem;
+	line-height: 150%;
+
+	color: var(--clr-text);
+}
+
+.social{
+   margin-top: 1.7rem;
+	display: flex;
+	align-items: center;
+	gap: 1.7rem;
+}

@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './styles/app.css'
+import BusinesCard from "./components/BusinesCard/BusinesCard";
+
+import "./styles/app.css";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>hello word</h1>
-    </div>
-  )
+	return (
+		<div className="App">
+			<BusinesCard />
+		</div>
+	);
 }
 
-export default App
+export default App;
