@@ -1,0 +1,31 @@
+.navbar{
+   height: 15vh;
+   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 3.1rem 2.5rem;
+
+
+   background-color: var(---background-navbar);
+}
+
+.logo{
+   display: flex;
+   align-items: center;
+
+   font-size: 2.2rem;
+   font-family: var(--ff-inter);
+   font-weight: 700;
+   line-height: 2.7rem;
+
+   color: var(--light-blue)
+}
+
+.navbar .info{
+   color: var(--grey);
+   font-size: 1.6rem;
+   font-family: var(--ff-inter);
+   font-weight: 600;
+   line-height: 1.9rem;
+}

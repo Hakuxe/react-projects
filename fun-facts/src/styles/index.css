@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+:root {
+
+	/* color */
+
+	--white: #fff;
+	--grey: #DEEBF8;
+
+	--light-blue: #61DAFB;
+	--light-blue-100: #00D8FF;
+
+	--dark: #33373E;
+
+	--background: #282D35;
+	---background-navbar: #21222A;
+   
+	/* fonts */
+	font-size: 62.5%; /* 10px pra ficar mais fácil de calcular em rem  */
+	--ff-inter: "Inter", sans-serif;
+}
