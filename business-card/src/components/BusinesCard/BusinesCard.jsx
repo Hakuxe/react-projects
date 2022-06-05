@@ -1,19 +1,20 @@
 import IconButton from "../IconButton/IconButton";
+import InfoSection from "../InfoSection/InfoSection";
 
 import "./businessCardStyles.css";
 
 import mailIcon from "../../assets/mail.svg";
 import linkedinIcon from "../../assets/linkedin_icon.svg";
 
-export default function BusinesCard() {
+export default function BusinesCard({ picture, name, job, extraInfo }) {
 	return (
 		<div className={"cardContainer"}>
 			<header>
-				<img src="https://picsum.photos/550/300" alt="foto de perfil" />
+				<img src={picture} alt={`Foto de perfil ${name}`} />
 				<div className="info">
-					<h2 className="name">Laura Smith</h2>
-					<p className="job">Frontend Developer</p>
-					<small>laurasmith.website</small>
+					<h2 className="name">{name}</h2>
+					<p className="job">{job}</p>
+					<small>{extraInfo}</small>
 
 					<div className="social">
 						<IconButton
@@ -33,25 +34,25 @@ export default function BusinesCard() {
 				</div>
 			</header>
 
-			<section className="about">
-				<h3>About</h3>
-				<p>
-					I am a frontend developer with a particular interest in making
-					things simple and automating daily tasks. I try to keep up with
-					security and best practices, and am always looking for new things
-					to learn.
-				</p>
-			</section>
+			<InfoSection
+				title={"About"}
+				text={
+					"I am a frontend developer with a particular interest in making things simple and automating daily tasks. I try to keep up with security and best practices, and am always looking for new things to learn."
+				}
+			/>
 
-			<section className="insterests">
-				<h3>Interests</h3>
-				<p>
-					Food expert. Music scholar. Reader. Internet fanatic. Bacon buff.
-					Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.
-				</p>
+			<InfoSection
+				title={"Interests"}
+				text={
+					"Food expert. Music scholar. Reader. Internet fanatic. Bacon buff. Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic."
+				}
+			/>
+			<section className="linkTree">
+				<img src="../../assets/gitHub_icon.svg" alt="Logo github" />
+				<img src="../../assets/facebook_icon.svg" alt="Logo facebook" />
+				<img src="../../assets/twitter_icon.svg" alt="Logo twitter" />
+				<img src="../../assets/linkedin_icon.svg" alt="Logo linkedin" />
 			</section>
-
-			<section className="linkTree"></section>
 		</div>
 	);
 }
