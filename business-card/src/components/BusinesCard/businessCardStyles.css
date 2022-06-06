@@ -1,10 +1,13 @@
 .cardContainer {
-	max-width: min(55rem, 100%);
+	max-width: min(31.7rem, 100%);
 	background-color: var(--light-background);
 }
 
-.cardContainer img{
+.cardContainer img {
 	max-width: 100%;
+}
+.cardContainer header img {
+	border-radius: 1rem 1rem 0px 0px;
 }
 
 .info {
@@ -26,7 +29,7 @@
 
 .info .job {
 	margin-top: 0.6rem;
-   
+
 	font-family: var(--ff-inter);
 	font-weight: 400;
 	font-size: 1.28rem;
@@ -46,9 +49,28 @@
 	color: var(--clr-text);
 }
 
-.social{
-   margin-top: 1.7rem;
+.social {
+	margin-top: 1.7rem;
 	display: flex;
 	align-items: center;
 	gap: 1.7rem;
+}
+
+.linkTree {
+	background-color: var(--grey-400);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-block: 1.95rem;
+
+	border-radius: 0px 0px 1rem 1rem;
+}
+
+.linkTree a {
+	margin-right: 2.4rem;
+}
+
+.linkTree :nth-last-child(1) {
+	margin-right: 0rem;
 }

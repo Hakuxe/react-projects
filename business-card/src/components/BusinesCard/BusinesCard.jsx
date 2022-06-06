@@ -4,6 +4,10 @@ import InfoSection from "../InfoSection/InfoSection";
 import "./businessCardStyles.css";
 
 import mailIcon from "../../assets/mail.svg";
+import twitterIcon from "../../assets/twitter_icon.svg";
+import facebookIcon from "../../assets/facebook_icon.svg";
+import githubIcon from "../../assets/gitHub_icon.svg";
+import instagramIcon from "../../assets/instagram_icon.svg";
 import linkedinIcon from "../../assets/linkedin_icon.svg";
 
 export default function BusinesCard({ picture, name, job, extraInfo }) {
@@ -48,10 +52,10 @@ export default function BusinesCard({ picture, name, job, extraInfo }) {
 				}
 			/>
 			<section className="linkTree">
-				<img src="../../assets/gitHub_icon.svg" alt="Logo github" />
-				<img src="../../assets/facebook_icon.svg" alt="Logo facebook" />
-				<img src="../../assets/twitter_icon.svg" alt="Logo twitter" />
-				<img src="../../assets/linkedin_icon.svg" alt="Logo linkedin" />
+				<a href=""><img src={twitterIcon} alt="Logo twitter" /></a>
+				<a href=""><img src={facebookIcon} alt="Logo facebook" /></a>
+				<a href=""><img src={instagramIcon} alt="Logo linkedin" /></a>
+				<a href=""><img src={githubIcon} alt="Logo github" /></a>
 			</section>
 		</div>
 	);
