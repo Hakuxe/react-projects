@@ -11,18 +11,25 @@ body{
 
 :root{
    --white: #fff;
+   --orange: #f47d27;
 
    --light-background: #F5F5F5;
    --dark-background: #23252C;
-   --orange: #f47d27;
+   --dark-theme: #1A1B21;
    
    --clr-title: #2b283a;
    --clr-text: #4a4e74; 
 
+   --grey-100:#F5F5F5;
+   --grey-200:#DCDCDC;
    --grey-300:#D1D5DB; 
    --grey-400:#D5D4D8;
    --grey-700: #374151;
-   --grey-900: #1C1C1C;
+
+   
+   --grey-dark-700: #161619;
+   --grey-dark-800: #1A1B21;
+   --grey-dark-900: #1C1C1C;
 
 
    /* Fonts */

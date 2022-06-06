@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import IconButton from "../IconButton/IconButton";
 import InfoSection from "../InfoSection/InfoSection";
 
@@ -11,10 +12,16 @@ import instagramIcon from "../../assets/instagram_icon.svg";
 import linkedinIcon from "../../assets/linkedin_icon.svg";
 
 export default function BusinesCard({ picture, name, job, extraInfo }) {
+	const [isDark, setIsDark] = useState(false);
+
 	return (
-		<div className={"cardContainer"}>
+		<div className={`cardContainer ${isDark ? 'darkTheme':''}`}>
 			<header>
 				<img src={picture} alt={`Foto de perfil ${name}`} />
+
+				{/* TODO: mudar para um switch-checkbox */}
+				<button onClick={()=> setIsDark(!isDark)}>dark</button>
+				
 				<div className="info">
 					<h2 className="name">{name}</h2>
 					<p className="job">{job}</p>

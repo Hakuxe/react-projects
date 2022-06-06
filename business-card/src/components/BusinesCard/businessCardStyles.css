@@ -77,3 +77,22 @@
 .linkTree :nth-last-child(1) {
 	margin-right: 0rem;
 }
+
+
+
+
+.darkTheme{
+	background-color: var( --dark-theme);
+	color: var(--grey-200);
+}
+
+.darkTheme .name{
+	color: var(--white);
+}
+.darkTheme small{
+	color: var(--grey-100);
+}
+
+.darkTheme .linkTree{
+	background-color: var(--grey-dark-700);
+}
