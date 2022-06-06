@@ -1,6 +1,9 @@
 .cardContainer {
 	max-width: min(31.7rem, 100%);
+	height: max-content;
+
 	background-color: var(--light-background);
+	border-radius: 1rem;
 }
 
 .cardContainer img {

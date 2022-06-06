@@ -13,6 +13,7 @@ body{
    --white: #fff;
 
    --light-background: #F5F5F5;
+   --dark-background: #23252C;
    --orange: #f47d27;
    
    --clr-title: #2b283a;
@@ -21,6 +22,7 @@ body{
    --grey-300:#D1D5DB; 
    --grey-400:#D5D4D8;
    --grey-700: #374151;
+   --grey-900: #1C1C1C;
 
 
    /* Fonts */
