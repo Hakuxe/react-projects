@@ -3,6 +3,10 @@
 	background-color: var(--light-background);
 }
 
+.cardContainer img{
+	max-width: 100%;
+}
+
 .info {
 	display: flex;
 	flex-direction: column;
