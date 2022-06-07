@@ -4,7 +4,7 @@
    flex-direction: column;
 }
 
-.heroPhoto{
+.hero-photo{
    max-width: min(50rem, 90%);
    margin-top: 2.6rem;
    align-self: center;
@@ -33,4 +33,9 @@
 	line-height: 110%;
 
 	color: #222222;
+}
+
+
+.cards{
+	margin-left: 3rem;
 }
