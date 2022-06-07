@@ -2,24 +2,39 @@ import "./card.css";
 
 import star from "../../assets/star.svg";
 
-export default function Card() {
+export default function Card({
+	status,
+	image,
+	rating,
+	reviewCount,
+	country,
+	title,
+	price,
+}) {
 	return (
 		<div className="card">
 			<figure className="card-image">
-				<span className="status">SOLD OUT</span>
-				<div className="card-photo"></div>
+				<span className="status">{status}</span>
+				<div className="card-photo">
+					<img
+						className="card-photo"
+						src={image}
+						alt=""
+					/>
+				</div>
 				<figcaption className="stars">
 					<span>
 						<img src={star} alt="" />
-						5.0
+						{rating}
 					</span>
-					(6) - USA
+					<span className="gray">({reviewCount}) • </span>
+					<span className="gray">{country}</span>
 				</figcaption>
 			</figure>
 			<div className="card-footer">
-				<p className="description">Life lessons with Katie Zaferes</p>
+				<p className="description">{title}</p>
 				<p className="price">
-					<span> From $136 </span> / person
+					<span> {price} </span> / person
 				</p>
 			</div>
 		</div>
