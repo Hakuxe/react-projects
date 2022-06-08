@@ -1,4 +1,6 @@
-import {useState} from 'react'
+import { useState } from "react";
+import Switch from "react-switch";
+
 import IconButton from "../IconButton/IconButton";
 import InfoSection from "../InfoSection/InfoSection";
 
@@ -10,18 +12,37 @@ import facebookIcon from "../../assets/facebook_icon.svg";
 import githubIcon from "../../assets/gitHub_icon.svg";
 import instagramIcon from "../../assets/instagram_icon.svg";
 import linkedinIcon from "../../assets/linkedin_icon.svg";
+import moonIcon from "../../assets/moon.svg";
+import sunIcon from "../../assets/sun.svg";
 
 export default function BusinesCard({ picture, name, job, extraInfo }) {
 	const [isDark, setIsDark] = useState(false);
 
 	return (
-		<div className={`cardContainer ${isDark ? 'darkTheme':''}`}>
+		<div className={`cardContainer ${isDark ? "darkTheme" : ""}`}>
 			<header>
 				<img src={picture} alt={`Foto de perfil ${name}`} />
+				<div className="react-switch-container">
+					<Switch
+						id="dark-theme-switch"
+						className="react-switch"
+						checked={isDark}
+						onChange={() => setIsDark(!isDark)}
+						onColor="#4d4d4d"
+						offColor="#e1e1e1"
+						boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+						height={20}
+						width={48}
+						handleDiameter={25}
+						checkedIcon={
+							<img src={sunIcon} width={30} height={20} alt="" />
+						}
+						uncheckedIcon={
+							<img src={moonIcon} width={40} height={18} alt="" />
+						}
+					/>
+				</div>
 
-				{/* TODO: mudar para um switch-checkbox */}
-				<button onClick={()=> setIsDark(!isDark)}>dark</button>
-				
 				<div className="info">
 					<h2 className="name">{name}</h2>
 					<p className="job">{job}</p>
@@ -59,10 +80,18 @@ export default function BusinesCard({ picture, name, job, extraInfo }) {
 				}
 			/>
 			<section className="linkTree">
-				<a href=""><img src={twitterIcon} alt="Logo twitter" /></a>
-				<a href=""><img src={facebookIcon} alt="Logo facebook" /></a>
-				<a href=""><img src={instagramIcon} alt="Logo linkedin" /></a>
-				<a href=""><img src={githubIcon} alt="Logo github" /></a>
+				<a href="">
+					<img src={twitterIcon} alt="Logo twitter" />
+				</a>
+				<a href="">
+					<img src={facebookIcon} alt="Logo facebook" />
+				</a>
+				<a href="">
+					<img src={instagramIcon} alt="Logo linkedin" />
+				</a>
+				<a href="">
+					<img src={githubIcon} alt="Logo github" />
+				</a>
 			</section>
 		</div>
 	);

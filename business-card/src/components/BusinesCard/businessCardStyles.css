@@ -96,3 +96,15 @@
 .darkTheme .linkTree{
 	background-color: var(--grey-dark-700);
 }
+
+
+
+.react-switch-container{
+	width: 100%;
+	padding-top: 0.6rem;
+	padding-right: 1rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
