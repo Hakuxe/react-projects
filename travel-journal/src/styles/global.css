@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root{
+  /* colors */
+  --white:#FFF;
+  --black:#000;
+  --red: #F55A5A;
+  --grey-100: #F5F7FB;
+  --grey-200: #F5F5F5;
+    
+  --clr-titles:#2B283A;
+  --clr-texts:#918E9B;
+
+  /* fonts */
+  --ff-inter: 'Inter', sans-serif;
+  font-size: 62.5%; /* 10px */
+}
