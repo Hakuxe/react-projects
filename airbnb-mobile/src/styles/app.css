@@ -1,13 +1,12 @@
-
 .hero {
 	display: flex;
-   flex-direction: column;
+	flex-direction: column;
 }
 
-.hero-photo{
-   max-width: min(50rem, 90%);
-   margin-top: 2.6rem;
-   align-self: center;
+.hero-photo {
+	max-width: min(50rem, 90%);
+	margin-top: 2.6rem;
+	align-self: center;
 }
 
 .title {
@@ -35,7 +34,12 @@
 	color: #222222;
 }
 
-
-.cards{
+.card-list {
 	margin-left: 3rem;
+
+	/* scroll horizontal*/
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 2rem;
+	overflow-x: auto;
 }

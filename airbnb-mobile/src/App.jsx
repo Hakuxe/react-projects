@@ -4,6 +4,7 @@ import "./styles/app.css";
 
 import heroPhoto from "./assets/grid-photos.png";
 import Card from "./components/Card/Card";
+import data from "../data.js";
 
 function App() {
 	return (
@@ -19,26 +20,25 @@ function App() {
 				</p>
 			</section>
 
-			<div className="cards">
-				<Card
-					status={"SOLD OUT"}
-					image={"https://picsum.photos/170/300"}
-					rating={"5.0"}
-					reviewCount={6}
-					country={"USA"}
-					title={"Life Lessons with Katie Zaferes"}
-					price={136}
-				/>
+			<div className="card-list">
+				{data.map((item) => {
+					return (
+						<Card
+							key={item.id}
+							title={item.title}
+							price={item.price}
+							// image={"https://picsum.photos/170/300"}
+							image={item.coverImg}
+							rating={item.stats.rating}
+							reviewCount={item.stats.reviewCount}
+							country={item.location}
+							openSpots={item.openSpots}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);
 }
 
 export default App;
-
-//  img ("katie-zaferes.png")
-//  rating ("5.0")
-//  reviewCount (6)
-//  country (Whatever you want)
-//  title ("Life Lessons with Katie Zaferes")
-//  price (136)

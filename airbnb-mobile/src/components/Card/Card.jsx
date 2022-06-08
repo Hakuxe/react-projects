@@ -3,24 +3,28 @@ import "./card.css";
 import star from "../../assets/star.svg";
 
 export default function Card({
-	status,
 	image,
 	rating,
 	reviewCount,
 	country,
 	title,
 	price,
+	openSpots,
 }) {
+	let badgeText;
+	if (openSpots === 0) {
+		badgeText = "SOLD OUT";
+	} else if (country === "Online") {
+		badgeText = "ONLINE";
+	}
+
 	return (
 		<div className="card">
 			<figure className="card-image">
-				<span className="status">{status}</span>
+				{badgeText && <span className="status">{badgeText}</span>}
+
 				<div className="card-photo">
-					<img
-						className="card-photo"
-						src={image}
-						alt=""
-					/>
+					<img className="card-photo" src={image} alt="" />
 				</div>
 				<figcaption className="stars">
 					<span>
