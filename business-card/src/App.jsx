@@ -29,3 +29,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: criar componente variante de  business card 
