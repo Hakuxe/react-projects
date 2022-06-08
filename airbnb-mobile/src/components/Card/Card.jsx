@@ -34,7 +34,7 @@ export default function Card({
 			<div className="card-footer">
 				<p className="description">{title}</p>
 				<p className="price">
-					<span> {price} </span> / person
+					<span> From ${price} </span> / person
 				</p>
 			</div>
 		</div>
