@@ -11,7 +11,7 @@ function App() {
 		<div className="app">
 			<Navbar />
 			<section className="card-list">
-				{data.map((item:any) => {
+				{data.map((item) => {
 					return <Card key={item.id} {...item} />;
 				})}
 			</section>
