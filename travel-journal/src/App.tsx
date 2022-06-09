@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar/Navbar";
 
 import "./styles/app.css";
 
-// @ts-ignore
 import { data } from "../fakeDb.js";
 
 function App() {
