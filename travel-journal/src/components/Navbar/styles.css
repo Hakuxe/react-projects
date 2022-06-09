@@ -1,0 +1,21 @@
+.navbar {
+	width: 100vw;
+	padding-block: 2rem ;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--red);
+}
+
+.logo-text {
+   margin-left: 0.7rem;
+	font-family: var(--ff-inter);
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 1.8rem;
+	letter-spacing: -0.075em;
+
+	color: #ffffff;
+}

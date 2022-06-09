@@ -1,0 +1,10 @@
+.card-list{
+   margin-top: 4.4rem;
+   margin-bottom: 3.6rem;
+   
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-content: center;
+   justify-content: center;
+   gap: 3.6rem;
+}

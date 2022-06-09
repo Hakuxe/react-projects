@@ -1,12 +1,23 @@
+import Card from "./components/Card/Card";
+import Navbar from "./components/Navbar/Navbar";
 
-import './styles/app.css'
+import "./styles/app.css";
+
+// @ts-ignore
+import { data } from "../fakeDb.js";
 
 function App() {
-  return (
-    <div className="App">
-      <h2>adfa</h2>
-    </div>
-  )
+	console.log(data);
+	return (
+		<div className="app">
+			<Navbar />
+			<section className="card-list">
+				{data.map((item:any) => {
+					return <Card key={item.id} {...item} />;
+				})}
+			</section>
+		</div>
+	);
 }
 
-export default App
+export default App;
