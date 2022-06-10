@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+:root {
+	--gradient-primary: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+	--gradient-secondary: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+
+	--grey-200: #d5d4d8;
+	--grey-800: #fcfcfc;
+
+	--dark-100: #0d0d0d;
+
+	/*fonts*/
+
+	--ff-karla:'Karla', sans-serif;
+
+	font-size: 62.5%; /* 10px */
+}
