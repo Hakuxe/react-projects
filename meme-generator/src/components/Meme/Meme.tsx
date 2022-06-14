@@ -1,13 +1,24 @@
-import React from "react";
-import { getRandomMeme } from "../../services/memeApi";
+import React, { useState } from "react";
+import { getAllMemes, getRandomMeme } from "../../services/memeApi";
 
 import "./meme.css";
 
 export default function MemeForm() {
 
+	const [allMemeImages, setAllMemeImages] = useState(getAllMemes())
+	const [meme, setMeme] = useState({
+		topText: "",
+		bottomText: "",
+		randomImage: "http://i.imgflip.com/1bij.jpg",
+	});
 
-	console.log(getRandomMeme().url);
-	
+	const getMemeImage = (event: React.MouseEvent<HTMLButtonElement>) => {
+		event?.preventDefault();
+		setMeme(prevMeme => {
+			return {...prevMeme, randomImage: getRandomMeme().url }
+		})
+	};
+
 
 	return (
 		<main>
@@ -16,8 +27,16 @@ export default function MemeForm() {
 					<input type="text" placeholder="Top text" />
 					<input type="text" placeholder="Bottom text" />
 				</fieldset>
-				<button className="form-button">Get a new meme image 🖼️</button>
+				<button
+					className="form-button"
+					onClick={(event) => getMemeImage(event)}
+				>
+					Get a new meme image 🖼️
+				</button>
 			</form>
+			<div className="meme-container">
+				<img src={meme.randomImage} alt="" />
+			</div>
 		</main>
 	);
 }
