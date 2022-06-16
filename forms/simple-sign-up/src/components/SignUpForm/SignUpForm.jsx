@@ -7,7 +7,7 @@ export default function SignUpForm() {
 		email: "",
 		password: "",
 		checkPassword: "",
-		signNewsletter: true,
+		joinedNewsletter: true,
 	});
 
 	const handleChange = (event) => {
@@ -24,7 +24,7 @@ export default function SignUpForm() {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		if (formData.signNewsletter) {
+		if (formData.joinedNewsletter) {
 			console.log("Thanks for signin up for our newsletter");
 		}
 
@@ -67,13 +67,13 @@ export default function SignUpForm() {
 
 			<fieldset className="container-checkbox">
 				<input
-					id="signNewsletter"
+					id="joinedNewsletter"
 					type="checkbox"
-					name="signNewsletter"
-					checked={formData.signNewsletter}
+					name="joinedNewsletter"
+					checked={formData.joinedNewsletter}
 					onChange={handleChange}
 				/>
-				<label htmlFor="signNewsletter">Assinar nossa newsletter ?</label>
+				<label htmlFor="joinedNewsletter">Assinar nossa newsletter ?</label>
 			</fieldset>
 
 			<button className="form-button" type="submit">
