@@ -4,8 +4,7 @@ import { getAllMemes, getRandomMeme } from "../../services/memeApi";
 import "./meme.css";
 
 export default function MemeForm() {
-
-	const [allMemeImages, setAllMemeImages] = useState(getAllMemes())
+	const [allMemeImages, setAllMemeImages] = useState(getAllMemes());
 	const [meme, setMeme] = useState({
 		topText: "",
 		bottomText: "",
@@ -14,18 +13,39 @@ export default function MemeForm() {
 
 	const getMemeImage = (event: React.MouseEvent<HTMLButtonElement>) => {
 		event?.preventDefault();
-		setMeme(prevMeme => {
-			return {...prevMeme, randomImage: getRandomMeme().url }
-		})
+		setMeme((prevMeme) => {
+			return { ...prevMeme, randomImage: getRandomMeme().url };
+		});
 	};
 
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, type, value, checked } = event.target;
+		setMeme((prevMeme) => {
+			return {
+				...prevMeme,
+				[name]: type === "checkbox" ? checked : value,
+			};
+		});
+	};
 
 	return (
 		<main>
 			<form>
 				<fieldset className="input-group">
-					<input type="text" placeholder="Top text" />
-					<input type="text" placeholder="Bottom text" />
+					<input
+						type="text"
+						name="topText"
+						value={meme.topText}
+						placeholder="Top text"
+						onChange={handleChange}
+					/>
+					<input
+						type="text"
+						name="bottomText"
+						value={meme.bottomText}
+						placeholder="Bottom text"
+						onChange={handleChange}
+					/>
 				</fieldset>
 				<button
 					className="form-button"
