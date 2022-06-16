@@ -56,6 +56,8 @@ export default function MemeForm() {
 			</form>
 			<div className="meme-container">
 				<img src={meme.randomImage} alt="" />
+				<h2 className="meme-text postion-top">{meme.topText}</h2>
+				<h2 className="meme-text postion-bottom" >{meme.bottomText}</h2>
 			</div>
 		</main>
 	);
