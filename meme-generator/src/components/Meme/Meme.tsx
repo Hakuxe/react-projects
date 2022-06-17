@@ -1,20 +1,41 @@
-import React, { useState } from "react";
-import { getAllMemes, getRandomMeme } from "../../services/memeApi";
+import React, { useEffect, useState } from "react";
+import { getAllMemes, getAllMemesAsync } from "../../services/memeApi";
 
 import "./meme.css";
 
 export default function MemeForm() {
-	const [allMemeImages, setAllMemeImages] = useState(getAllMemes());
+	const [allMemes, setAllMemes] = useState(getAllMemes());
 	const [meme, setMeme] = useState({
 		topText: "",
 		bottomText: "",
 		randomImage: "http://i.imgflip.com/1bij.jpg",
 	});
 
+	useEffect(() => {
+		const getMemes = async () => {
+			setAllMemes(await getAllMemesAsync());
+		};
+
+		getMemes();
+
+		/*
+			fetch("https://api.imgflip.com/get_memes")
+				.then(res => res.json())
+				.then(response => setAllMemes(response.data.memes))
+				.catch(error => console.error(error))
+		 */
+	}, []);
+
 	const getMemeImage = (event: React.MouseEvent<HTMLButtonElement>) => {
 		event?.preventDefault();
+
+		const randomPick = allMemes[Math.floor(Math.random() * allMemes.length)];
+
 		setMeme((prevMeme) => {
-			return { ...prevMeme, randomImage: getRandomMeme().url };
+			return {
+				...prevMeme,
+				randomImage: randomPick.url,
+			};
 		});
 	};
 
@@ -57,7 +78,7 @@ export default function MemeForm() {
 			<div className="meme-container">
 				<img src={meme.randomImage} alt="" />
 				<h2 className="meme-text postion-top">{meme.topText}</h2>
-				<h2 className="meme-text postion-bottom" >{meme.bottomText}</h2>
+				<h2 className="meme-text postion-bottom">{meme.bottomText}</h2>
 			</div>
 		</main>
 	);
