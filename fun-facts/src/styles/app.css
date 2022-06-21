@@ -5,7 +5,7 @@ body{
    padding: 5.7rem 2.5rem 0;
    width: 100vw;
    height: 95vh;
-   background: var(--background) url('../assets/reactjs-icon.svg');
+   background: var(--white) url('../assets/reactjs-icon.svg');
    background-repeat: no-repeat;
    background-position: right 75%;
   
@@ -18,7 +18,7 @@ body{
    line-height: 4.7rem;
    letter-spacing: -0.05em;
 
-   color: var(--white);
+   color: var(--black);
 
 }
 
@@ -34,7 +34,7 @@ body{
 }
 
 .topics li{
-   color: var(--white);
+   color: var(--black);
    font-size: 1.6rem;
    font-weight: 400;
    font-family: var(--ff-inter);
@@ -44,3 +44,16 @@ body{
 
    margin-bottom: 2rem;
 }  
+
+
+main.dark {
+   /* background-image: url("./images/react-icon-dark.png");  */
+   background-color: var(--background);
+   color: var(--white);    
+}  
+
+main.dark .title, 
+main.dark .topics li{
+   color: var(--white);    
+}  
+

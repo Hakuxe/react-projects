@@ -6,8 +6,9 @@
    align-items: center;
    padding: 3.1rem 2.5rem;
 
-
-   background-color: var(---background-navbar);
+   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+   background-color: var(--white);
 }
 
 .logo{
@@ -22,10 +23,8 @@
    color: var(--light-blue)
 }
 
-.navbar .info{
-   color: var(--grey);
-   font-size: 1.6rem;
-   font-family: var(--ff-inter);
-   font-weight: 600;
-   line-height: 1.9rem;
+
+nav.dark {
+   
+   background-color: var(---background-navbar);
 }
