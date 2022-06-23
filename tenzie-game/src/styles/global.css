@@ -1,0 +1,22 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root{
+
+   /* colors */
+   --purple:#5035FF;
+
+   --light-green: #59E391;
+   
+   --clr-text: #2b283a;
+   --clr-text-secondary: #4a4e74;
+   
+
+   /* fonts */
+   font-size: 62.5%; /* 10px */
+   --ff-karla: "Karla", sans-serif;
+   --ff-inter: "Inter", sans-serif;
+}
