@@ -108,3 +108,9 @@ function App() {
 }
 
 export default App;
+
+
+// extras
+//track number of rolls to win
+//track time to win
+//scorebord of the above itens
