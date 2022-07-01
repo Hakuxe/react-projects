@@ -9,6 +9,7 @@ export function Info() {
 			<div className="flex flex-col mt-4">
 				<Link to={"/basic"} className="text-blue-500">Basics </Link>
 				<Link to={"/sign-in"} className="text-blue-500"> Erro handling </Link>
+				<Link to={"/yup-form"} className="text-blue-500"> Yup validation</Link>
 			</div>
 		</div>
 	);
