@@ -59,34 +59,6 @@ export function SignIn() {
 			<label htmlFor="user" className="mt-5">
 				Idade:
 			</label>
-			<input
-				id="age"
-				type="number"
-				className="border border-gray-300 p-3"
-				placeholder="Digite sua idade"
-				{...register("age", {
-					required: "This input is required.",
-					pattern: {
-						value: /\d+/,
-						message: "This input is number only.",
-					},
-					maxLength: {
-						value: 10,
-						message: "This input exceed maxLength.",
-					},
-				})}
-			/>
-			<ErrorMessage
-				errors={errors}
-				name="age"
-				render={({ messages }) =>
-					messages &&
-					Object.entries(messages).map(([type, message]) => (
-						<p key={type}>{message}</p>
-					))
-				}
-			/>
-
 			<button
 				type="submit"
 				className="w-full rounded bg-purple-600 hover:bg-purple-700 transition-colors py-4 mt-8 text-white font-bold"
