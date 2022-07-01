@@ -1,15 +1,35 @@
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, } from "react-hook-form";
+
+enum GenderEnum {
+	female = "female",
+	male = "male",
+}
+
+enum favoriteColorEnum {
+	red = "vermelho",
+	blue = "azul",
+	green = "verde",
+}
+
+type FormInputs = {
+	fullName: string;
+	email: string;
+	gender: GenderEnum;
+	reciveUpdates: boolean;
+	message: string;
+	currentDate: Date;
+	favoriteColor: favoriteColorEnum;
+};
 
 export function Form() {
 	const {
 		register,
 		handleSubmit,
-		watch,
 		formState: { errors },
-	} = useForm();
+	} = useForm<FormInputs>();
 
-	const onSubmit: SubmitHandler<{}> = (data) => {
+	const onSubmit: SubmitHandler<FormInputs> = (data) => {
 		console.log(data);
 	};
 
@@ -18,11 +38,16 @@ export function Form() {
 			className="flex flex-col justify-center items-center gap-4 p-8 bg-slate-50 w-[500px] rounded-2xl"
 			onSubmit={handleSubmit(onSubmit)}
 		>
+			{errors.fullName && (
+				<span className="text-red-500 self-start">Campos obrigatórios</span>
+			)}
 			<input
 				type="text"
-				className="border border-gray-400 p-2 rounded w-full"
+				className={`${
+					errors.fullName ? "border-red-500 border-3 " : "border-gray-400"
+				} border border-gray-400 p-2 rounded w-full`}
 				placeholder="Digite seu nome"
-				{...register("fullName")}
+				{...register("fullName", { required: true })}
 			/>
 			<input
 				type="email"
