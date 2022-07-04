@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 type YupInputTypes = {
 	name: string;
 	email: string;
-	age: never;
+	age: number;
 	createdOn: Date;
 };
 
@@ -38,11 +38,13 @@ export function YupForm() {
 				type="text"
 				placeholder="Digite seu nome"
 				className="border border-gray-300 p-3"
+				{...register("name")}
 			/>
 			<input
 				type="text"
 				placeholder="Digite seu e-mail"
 				className="border border-gray-300 p-3"
+				{...register("email")}
 			/>
 			<input
 				type="number"
@@ -50,11 +52,13 @@ export function YupForm() {
 				className="border border-gray-300 p-3"
 				min={0}
 				max={102}
+				{...register("age")}
 			/>
 			<input
 				type="date"
 				placeholder="Digite sua data de nascimento"
 				className="border border-gray-300 p-3"
+				{...register("createdOn")}
 			/>
 		</form>
 	);
