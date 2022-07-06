@@ -11,3 +11,8 @@
 :root{
    font-size: 62.5%;
 } */
+
+
+.erro-message{
+   @apply text-sm text-red-500 mb-4
+}
