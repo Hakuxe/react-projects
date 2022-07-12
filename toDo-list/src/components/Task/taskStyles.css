@@ -1,0 +1,29 @@
+.task-item{
+   padding-inline: 0.5rem;
+   padding-block: 1.6rem;
+   margin-bottom: 0.8rem;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   /* background-color: #eee; */
+   border-radius: 1rem;
+}
+
+.input-label{
+   font-size: 1.8rem;
+   display: flex;
+   gap: 0.5rem;
+   align-items: center;
+}
+
+.input-label input{
+   width: 2rem;
+   height: 2rem;
+}
+
+.done-tark{
+   text-decoration: line-through;
+   opacity: 50%;
+}
