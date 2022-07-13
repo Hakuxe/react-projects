@@ -4,15 +4,12 @@ import { Trash } from "phosphor-react";
 
 import "./taskStyles.css";
 
-interface ToDoItemProps {
-	id: number;
-	taskDescription: string;
-	isDone: boolean;
-	handleDoneTask: any; //TODO; mudar esse type dps
-	handleDeleteTask: any; //TODO; mudar esse type dps
-}
+type Props = TaskItem & {
+	handleDoneTask:ToggleIsDoneTask ;
+	handleDeleteTask: DeleteTask;
+} 
 
-export const Task: FC<ToDoItemProps> = ({
+export const Task: FC<Props> = ({
 	id,
 	taskDescription,
 	isDone,

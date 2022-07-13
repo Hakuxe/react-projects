@@ -5,5 +5,16 @@
 }
 
 :root{
+
+	/* colors */
+	--white:#FFF;
+	--red:#ed333b;
+
+	--clr-text: #222
+
+	--overlay: ;
+
+	--ff-arial-helvetica: Arial, Helvetica, sans-serif;
+
    font-size: 62.5%;
 }

@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { Task } from "../../components/Task/Task";
 
 interface Props {
-	tasksBd: { id: number; taskDescription: string; isDone: boolean }[];
+	tasksBd: TaskItem[];
 	handleChange: any; //TODO; mudar esse type dps
 	handleDeleteTask: any; //TODO; mudar esse type dps
 }
