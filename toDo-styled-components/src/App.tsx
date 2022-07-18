@@ -9,13 +9,20 @@ export const App = () => {
 		{ id: 2, description: "Levar cachorro no veterinário ", isDone: true },
 	]);
 
+	function toggleTaskAsDone(id: number){
+		setToDoList(prevToDo => {
+			return prevToDo.map(item => item.id !== id ? item : {...item, isDone: !item.isDone })
+		})
+
+	}
+
 	return (
 		<C.Container>
 			<C.ContainerContent>
 				<C.Title>Lista de tarefas</C.Title>
 
 				{toDoList.map((item, index) => (
-					<Task key={index} item={item}/>
+					<Task key={index} item={item} handleDoneTask={toggleTaskAsDone}/>
 				))}
 			</C.ContainerContent>
 		</C.Container>
