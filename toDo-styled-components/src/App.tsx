@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import * as C from "./App.styles";
+import { AddInputArea } from "./components/AddInputArea/AddInputArea";
 import { Task } from "./components/Task/Task";
 
 export const App = () => {
@@ -16,10 +17,23 @@ export const App = () => {
 
 	}
 
+	function handleAddTask(taskName: string){
+		let newList = [...toDoList];
+		newList.push({
+			id: toDoList.length +1,
+			description:taskName,
+			isDone: false
+		})
+
+		setToDoList(newList);
+	}
+
 	return (
 		<C.Container>
 			<C.ContainerContent>
 				<C.Title>Lista de tarefas</C.Title>
+
+				<AddInputArea handleAddTask={handleAddTask}/>
 
 				{toDoList.map((item, index) => (
 					<Task key={index} item={item} handleDoneTask={toggleTaskAsDone}/>

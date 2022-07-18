@@ -10,6 +10,7 @@ export const  GlobalStyles = createGlobalStyle`
 
    :root{
       --white: #fff;
+      --gray-500: #555;
       --gray-800: #ccc;
 
       --dark-500: #17181f;
