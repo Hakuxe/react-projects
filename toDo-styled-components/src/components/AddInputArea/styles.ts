@@ -13,6 +13,7 @@ export const Container = styled.div`
       font-size: 3.6rem;   
       color: var(--white);
       margin-right: 0.4rem;
+      cursor: pointer;
    }
 
    input{
