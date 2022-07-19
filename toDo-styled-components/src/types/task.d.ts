@@ -3,3 +3,5 @@ type Task = {
 	description: string;
 	isDone: boolean;
 };
+
+type AddTask = (taskName: string) => void;
