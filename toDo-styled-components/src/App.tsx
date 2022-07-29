@@ -58,4 +58,4 @@ export const App = () => {
 	);
 };
 
-// 45 minutos
+
