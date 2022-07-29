@@ -1,20 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import * as C from "./App.styles";
 import { AddInputArea } from "./components/AddInputArea/AddInputArea";
 import { Task } from "./components/Task/Task";
 
 export const App = () => {
-	const [toDoList, setToDoList] = useState<Task[]>([
-		{ id: 1, description: "Lavar o carro", isDone: false },
-		{ id: 2, description: "Levar cachorro no veterinário ", isDone: true },
-	]);
+	const [toDoList, setToDoList] = useState<Task[]>([]);
+	
+	useEffect(() =>{
+		const jsonData = localStorage.getItem("tasks") ;
+
+		if(jsonData){
+			setToDoList(JSON.parse(jsonData));
+		}else{
+			localStorage.setItem("tasks", JSON.stringify(toDoList));
+		}
+
+
+	}, []);
+
+	function saveInLocalStorage(arr : Task[]){
+		localStorage.setItem("tasks", JSON.stringify(arr));
+	}
 
 	function toggleTaskAsDone(id: number){
 		setToDoList(prevToDo => {
-			return prevToDo.map(item => item.id !== id ? item : {...item, isDone: !item.isDone })
-		})
-
+			const changedArray = prevToDo.map(item => item.id !== id ? item : {...item, isDone: !item.isDone })
+			saveInLocalStorage(changedArray);
+			return changedArray;
+		});
 	}
 
 	function handleAddTask(taskName: string){
@@ -26,6 +40,7 @@ export const App = () => {
 		})
 
 		setToDoList(newList);
+		saveInLocalStorage(newList)
 	}
 
 	return (
