@@ -1,7 +1,11 @@
+import { Container, Header, Title } from "./styles";
+
 export function Home(){
   return(
-    <div>
-      <h1>heloo</h1>
-    </div>
+    <Container >
+      <Header>
+        <Title>Financee</Title>
+      </Header>
+    </Container>
   )
 }
