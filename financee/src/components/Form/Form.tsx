@@ -1,4 +1,4 @@
-import { Container, InputGroup } from "./formStyles";
+import { AddButton, Container, InputGroup } from "./formStyles";
 
 export default function Form() {
 	return (
@@ -28,7 +28,7 @@ export default function Form() {
 					<input id="transactionValue" type="number" />
 				</InputGroup>
 
-				<button>Adicionar</button>
+				<AddButton>Adicionar</AddButton>
 			</form>
 		</Container>
 	);
