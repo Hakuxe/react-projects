@@ -1,4 +1,5 @@
-import { AddButton, Container, InputGroup } from "./formStyles";
+import { StyledButton } from "../../styles/Buttons";
+import { AddButton, Container, InputGroup} from "./formStyles";
 
 export default function Form() {
 	return (
@@ -28,7 +29,10 @@ export default function Form() {
 					<input id="transactionValue" type="number" />
 				</InputGroup>
 
-				<AddButton>Adicionar</AddButton>
+				{/* <AddButton>Adicionar</AddButton> */}
+
+				<StyledButton >Adicionar</StyledButton>
+
 			</form>
 		</Container>
 	);

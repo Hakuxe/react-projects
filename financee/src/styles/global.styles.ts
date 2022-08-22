@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -23,4 +23,13 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 62.5%; /*10px */
    }
 
+`;
+
+export const Box = styled.div`
+	width: 70%;
+	height: 10rem;
+   margin: 0 auto;
+   padding-block: 1rem;
+   padding-inline: 3rem;
+	background-color: var(--white);
 `;

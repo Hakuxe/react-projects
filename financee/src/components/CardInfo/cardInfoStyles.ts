@@ -1,20 +1,15 @@
 import styled from "styled-components";
+import { Box } from "../../styles/global.styles";
 
-export const CardContainer = styled.div`
-	background-color: var(--white);
-	width: 70%;
-	height: 10rem;
-
-	margin: 0 auto;
+export const CardContainer = styled(Box)`
 	margin-top: -5rem;
-	padding: 1rem;
 	border-radius: 1rem;
 
 	display: flex;
 
 	.month-select {
       display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		align-items: center;
 		flex-grow: 1;
 
