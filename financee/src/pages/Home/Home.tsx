@@ -1,3 +1,4 @@
+import BudgetHistory from "../../components/BudgetHistory/BudgetHistory";
 import { CardInfo } from "../../components/CardInfo/CardInfo";
 import Form from "../../components/Form/Form";
 import { Container, Header, Title } from "./styles";
@@ -10,6 +11,7 @@ export function Home(){
       </Header>
         <CardInfo />
         <Form />
+        <BudgetHistory/>
     </Container>
   )
 }

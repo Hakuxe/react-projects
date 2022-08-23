@@ -29,10 +29,7 @@ export default function Form() {
 					<input id="transactionValue" type="number" />
 				</InputGroup>
 
-				{/* <AddButton>Adicionar</AddButton> */}
-
-				<StyledButton >Adicionar</StyledButton>
-
+				<AddButton>Adicionar</AddButton>
 			</form>
 		</Container>
 	);

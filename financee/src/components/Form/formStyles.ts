@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { Box } from "../../styles/global.styles";
+
+import { StyledButton } from "../../styles/Buttons";
+import { Box } from "../../styles/globalStyles";
 
 export const Container = styled(Box)`
 	margin-top: 2rem;
-	border-radius: 1rem;
-
+	
 	display: grid;
 	grid-template-columns: 1fr;
 	align-items: center;
@@ -30,9 +31,6 @@ export const InputGroup = styled.fieldset`
 	}
 `;
 
-export const AddButton = styled.button`
-	padding-inline: 4rem;
-	padding-block: 0.5rem;
-	height: fit-content;
+export const AddButton = styled(StyledButton)`
 	align-self: flex-end;
 `;

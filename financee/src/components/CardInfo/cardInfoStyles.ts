@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { Box } from "../../styles/global.styles";
+import { Box } from "../../styles/globalStyles";
 
 export const CardContainer = styled(Box)`
 	margin-top: -5rem;
-	border-radius: 1rem;
 
 	display: flex;
 

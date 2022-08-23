@@ -32,4 +32,5 @@ export const Box = styled.div`
    padding-block: 1rem;
    padding-inline: 3rem;
 	background-color: var(--white);
+   border-radius: 1rem;
 `;
