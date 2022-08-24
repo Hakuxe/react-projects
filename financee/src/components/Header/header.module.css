@@ -1,0 +1,16 @@
+.headerContainer{
+   height: 25vh;
+   padding-top: 3rem;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+
+   background-color: var(--green-300);
+   color:var(--white);
+   font-family: var(--ff-roboto);
+}
+
+
+h1{
+   font-size: 3.5rem;
+}
