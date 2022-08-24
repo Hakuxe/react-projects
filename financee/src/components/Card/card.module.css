@@ -1,0 +1,9 @@
+.card{
+   margin-bottom: 2rem;
+   padding-block: 1rem;
+   padding-inline: 2rem;
+
+   border-radius: 0.8rem;
+   border: 0.2rem solid lightgrey;
+   background-color: var(--white);
+}
