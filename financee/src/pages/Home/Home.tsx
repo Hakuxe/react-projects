@@ -1,17 +1,13 @@
-import BudgetHistory from "../../components/BudgetHistory/BudgetHistory";
-import { CardInfo } from "../../components/CardInfo/CardInfo";
-import Form from "../../components/Form/Form";
-import { Container, Header, Title } from "./styles";
+import React from "react";
+import { Header } from "../../components/Header/Header";
 
-export function Home(){
-  return(
-    <Container >
-      <Header>
-        <Title>Financee</Title>
-      </Header>
-        <CardInfo />
-        <Form />
-        <BudgetHistory/>
-    </Container>
-  )
-}
+import styles from "./home.module.css";
+
+export const Home: React.FC = () => {
+	return (
+		<section>
+			<Header />
+			<main className={styles.container}>...</main>
+		</section>
+	);
+};
