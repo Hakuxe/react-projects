@@ -1,4 +1,6 @@
 import React from "react";
+import { CaretLeft, CaretRight } from "phosphor-react";
+
 import { Card } from "../../components/Card/Card";
 import { Header } from "../../components/Header/Header";
 
@@ -9,13 +11,21 @@ export const Home: React.FC = () => {
 		<section>
 			<Header />
 			<main className={styles.container}>
-				<Card>
-					<section>
-						<button>--</button>
-						OUtubro
-						<button>--</button>
+				<Card stylesObject={styles} extraClass="resumeContainer">
+					<section className={styles.monthSelector}>
+						<button>
+							<CaretLeft size={16} />
+						</button>
+						<span>Outubro 2021</span>
+						<button>
+						<CaretRight size={16} />
+						</button>
 					</section>
-					<section>
+					<section className={styles.resume}>
+						<div>
+							<p>Gastos:</p>
+							<span>R$ 1000,00</span>
+						</div>
 						<div>
 							<p>Gastos:</p>
 							<span>R$ 1000,00</span>
@@ -27,9 +37,11 @@ export const Home: React.FC = () => {
 					</section>
 				</Card>
 
-				<Card >...</Card>
+				<Card>...</Card>
 
-				<Card stylesObject={styles} extraClass={"red"}>...</Card>
+				<Card stylesObject={styles} extraClass={"red"}>
+					...
+				</Card>
 			</main>
 		</section>
 	);
