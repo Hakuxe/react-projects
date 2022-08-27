@@ -5,6 +5,7 @@ import { Card } from "../../components/Card/Card";
 import { Header } from "../../components/Header/Header";
 
 import styles from "./home.module.css";
+import { Form } from "../../components/Form/Form";
 
 export const Home: React.FC = () => {
 	return (
@@ -18,7 +19,7 @@ export const Home: React.FC = () => {
 						</button>
 						<span>Outubro 2021</span>
 						<button>
-						<CaretRight size={16} />
+							<CaretRight size={16} />
 						</button>
 					</section>
 					<section className={styles.resume}>
@@ -37,7 +38,9 @@ export const Home: React.FC = () => {
 					</section>
 				</Card>
 
-				<Card>...</Card>
+				<Card>
+					<Form />
+				</Card>
 
 				<Card stylesObject={styles} extraClass={"red"}>
 					...
