@@ -50,3 +50,24 @@
 	font-size: 1.6rem;
 	font-weight: bold;
 }
+
+
+
+
+/* history */
+
+.history{
+	width: 100%;
+	text-align: left;
+	font-size: 1.4rem;
+}
+
+.history tr :nth-child(1){
+	max-width: 3rem;
+}
+
+.history td{
+	padding-block: 1.4rem;
+}
+
+

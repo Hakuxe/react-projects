@@ -43,7 +43,25 @@ export const Home: React.FC = () => {
 				</Card>
 
 				<Card stylesObject={styles} extraClass={"red"}>
-					...
+					<table className={styles.history}>
+						<thead>
+							<tr>
+								<th>Data</th>
+								<th>Categoria</th>
+								<th>Título</th>
+								<th>Valor</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>10/10/1997</td>
+								<td>salario</td>
+								<td>almoço</td>
+								<td>R$ 50,00</td>
+							</tr>
+						</tbody>
+						<tbody></tbody>
+					</table>
 				</Card>
 			</main>
 		</section>
