@@ -1,0 +1,36 @@
+[
+   {
+      "month":"JANEIRO",
+      "monthNumber": 1,
+      "expense": 3000,
+      "income": 4000,
+      "history":[
+         {
+            "date":"10/10/1997",
+            "category":"salario",
+            "title":"salario",
+            "amount":4000
+         },
+         {
+            "date":"10/10/1997",
+            "category":"salario",
+            "title":"salario",
+            "amount":4000
+         }
+      ]
+   },
+   {
+      "month":"fevereiro",
+      "monthNumber": 2,
+      "expense": 3000,
+      "income": 4000,
+      "history":[
+         {
+            "date":"10/10/1997",
+            "category":"salario",
+            "title":"salario",
+            "amount":4000
+         }
+      ]
+   }
+]

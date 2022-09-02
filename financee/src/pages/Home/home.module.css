@@ -62,9 +62,6 @@
 	font-size: 1.4rem;
 }
 
-.history tr :nth-child(1){
-	max-width: 3rem;
-}
 
 .history td{
 	padding-block: 1.4rem;
