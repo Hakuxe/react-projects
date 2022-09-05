@@ -23,6 +23,12 @@ export const Home: React.FC = () => {
 		}
 	}	
 
+
+	function handleAddTransation(transation: ITransaction){
+		console.log("add",transation)
+	}
+		
+
 	return (
 		<section>
 			<Header />
@@ -45,7 +51,7 @@ export const Home: React.FC = () => {
 				</Card>
 
 				<Card>
-					<Form />
+					<Form handleSubmit={handleAddTransation}/>
 				</Card>
 
 				<Card stylesObject={styles} extraClass={"red"}>
