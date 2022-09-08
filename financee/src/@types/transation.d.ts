@@ -1,7 +1,7 @@
 interface ITransaction {
    date: string,
    category: string,
-   amount: string,
+   amount: number,
    title: string
 }
 

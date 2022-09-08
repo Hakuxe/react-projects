@@ -21,13 +21,17 @@ export const Home: React.FC = () => {
 		} else {
 			setSelectedMonth(1);
 		}
-	}	
-
-
-	function handleAddTransation(transation: ITransaction){
-		console.log("add",transation)
 	}
-		
+
+	function handleAddTransation(transation: ITransaction) {
+		console.log("aki")
+		data.map((item) => {
+			if (item.monthNumber === selectedMonth) {
+				item.history.push(transation);
+			}
+		});
+		console.log(data)
+	}
 
 	return (
 		<section>
@@ -44,14 +48,22 @@ export const Home: React.FC = () => {
 						</button>
 					</section>
 					<section className={styles.resume}>
-						<BudgedInfo key={1} info={monthData?.expense.toString()} title="Gastos" />
-						<BudgedInfo key={2} info={monthData?.income.toString()} title="Ganhos" />
+						<BudgedInfo
+							key={1}
+							info={monthData?.expense.toString()}
+							title="Gastos"
+						/>
+						<BudgedInfo
+							key={2}
+							info={monthData?.income.toString()}
+							title="Ganhos"
+						/>
 						<BudgedInfo key={3} info="R$ 1000,00" title="Balanço" />
 					</section>
 				</Card>
 
 				<Card>
-					<Form handleSubmit={handleAddTransation}/>
+					<Form handleSubmit={handleAddTransation} />
 				</Card>
 
 				<Card stylesObject={styles} extraClass={"red"}>

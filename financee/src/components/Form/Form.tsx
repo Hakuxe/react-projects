@@ -16,7 +16,7 @@ export const Form = ({ handleSubmit }: Props) => {
 		date: "",
 		category: "",
 		title: "",
-		amount: "",
+		amount: 0,
 	});
 
 	function handleChange(
