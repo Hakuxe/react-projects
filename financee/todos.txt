@@ -1,0 +1,8 @@
+FIXME Form.tsx
+   [ ] - arrumar o estilo do form
+   [ ] - formatar os inputs do form 
+   [ ] - alterar type da função handlesubmit
+
+
+FIXME Home.tsx
+   [ ] - criar função de adiconar dados no bd 

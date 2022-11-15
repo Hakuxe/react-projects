@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+
+# PhpStorm
+.idea
+
+# vscode
+.vscode
+
+#mac
+.DS Store
