@@ -1,7 +1,7 @@
 export function App() {
 	return (
 		<>
-			<div>App</div>
+			<div className="bg-black">App</div>
 		</>
 	);
 }
