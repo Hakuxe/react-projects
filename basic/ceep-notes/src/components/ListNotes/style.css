@@ -1,0 +1,16 @@
+:root{
+    --background-color:whitesmoke;
+}
+
+.list-cards{
+   background-color: var(--background-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+}
+
+.list-cards ul{
+    list-style:none;
+    width: 50%;
+ }

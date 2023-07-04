@@ -1,0 +1,13 @@
+.card-nota{
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid rgba(199, 199, 199,0.3);
+    box-shadow: 2px 2px rgb(233, 233, 233);
+    text-align: center;
+    color:red;
+    
+}
+
